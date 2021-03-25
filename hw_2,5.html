@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arg1 = +prompt("Введите первое число");
+        let arg2 = +prompt("Введите второе число");
+
+        if (arg1 < 0 || arg2 < 0) {
+            operation = "multiply";
+        } else if (arg1 < arg2) {
+            operation = "subtraction";
+        } else if (arg1 > arg2) {
+            operation = "summ";
+        } else {
+            operation = "division";
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "summ":
+                    return arg1 + arg2;
+                    break;
+
+                case "subtraction":
+                    return arg1 - arg2;
+                    break;
+
+                case "division":
+                    return arg1 / arg2;
+                    break;
+
+                case "multiply":
+                    return arg1 * arg2;
+                    break;
+
+                default:
+                    alert("Введите число")
+                    break;
+            }
+        }
+
+        task1 = mathOperation(arg1, arg2, operation);
+        alert(task1);
+
+    </script>
+</body>
+
+</html>
