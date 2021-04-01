@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let remainder;
+
+        for (let count = 0; count <= 10; ++count) {
+            let test = count;
+            /*
+                Пока я не понял что "count" не надо сравнивать с 0,
+                у меня цикл был безконечный и браузер уходил в себя на долго,
+                только почему не понял (объясните?) 
+            */
+            if (count < 1) {
+                remainder = " - это ноль";
+            } else if ((test %= 2) == 1) {
+                remainder = " - это нечетное число";
+            } else {
+                remainder = " - это четное число";
+            }
+            console.log(count + remainder);
+        }
+
+    </script>
+</body>
+
+</html>
