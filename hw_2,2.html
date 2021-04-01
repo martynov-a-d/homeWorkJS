@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a = 2;
+
+        /*
+            сначала выполняем действия в (приоритет выше), 
+            "a" (2) умножаем на 2 и присваиваем полученный резвультат "a", 
+            "x" (1) прибавляем "a" (4)
+        */
+
+        let x = 1 + (a *= 2);
+
+        alert(x);   // x = 5
+
+    </script>
+
+</body>
+
+</html>
