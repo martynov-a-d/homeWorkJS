@@ -11,35 +11,36 @@
 
     <script>
 
-        var a = +prompt("Введите первое число");
-        var b = +prompt("Введите второе число");
+        "use strict"
+        let a = +prompt("Введите первое число");
+        let b = +prompt("Введите второе число");
 
         function summ(a, b) {
             return a + b;
         }
 
-        task1 = summ(a, b);
+        let task1 = summ(a, b);
         alert(task1);
 
         function subtraction(a, b) {
             return a - b;
         }
 
-        task2 = subtraction(a, b);
+        let task2 = subtraction(a, b);
         alert(task2);
 
         function division(a, b) {
             return a / b;
         }
 
-        task3 = division(a, b);
+        let task3 = division(a, b);
         alert(task3);
 
         function multiply(a, b) {
             return a * b;
         }
 
-        task4 = multiply(a, b);
+        let task4 = multiply(a, b);
         alert(task4);
 
     </script>

@@ -11,6 +11,7 @@
 
     <script>
 
+        "use strict"
         let arg1 = +prompt("Введите первое число");
         let arg2 = +prompt("Введите второе число");
 
@@ -28,23 +29,14 @@
             switch (operation) {
                 case "summ":
                     return arg1 + arg2;
-                    break;
-
                 case "subtraction":
                     return arg1 - arg2;
-                    break;
-
                 case "division":
                     return arg1 / arg2;
-                    break;
-
                 case "multiply":
                     return arg1 * arg2;
-                    break;
-
                 default:
-                    alert("Введите число")
-                    break;
+                    alert("Введите число");
             }
         }
 
