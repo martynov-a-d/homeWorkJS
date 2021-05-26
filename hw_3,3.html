@@ -25,6 +25,15 @@
             },
         ];
 
+        // С использованием функции
+
+        products.forEach(function () {
+            products.price = products.price - (products.price * 15) / 100;
+        });
+        console.log(products);
+
+        // С использованием стрелочной функции
+
         products.forEach(element => {
             element.price = element.price - element.price * 15 / 100;
         });

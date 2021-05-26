@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        'use strict'
+
+        function Numbers(units, tens, hundreds) {
+            this.units = units;
+            this.tens = tens;
+            this.hundreds = hundreds;
+        }
+        
+        // Это рабочий вариант
+
+        function rounding(number) {
+            while(number.length < 3) {
+                number = "0" + number;
+            }
+            return number;
+        }
+
+        let number = prompt("Введите целое число от 0 до 999");
+        
+        // Тут явно надо доработать :)
+
+        let test1 = rounding(number);
+        let test2 = test1.split('');
+
+        console.log(test2);
+
+        let test = new Numbers(test2[2], test2[1], test2[0]);
+
+        console.log(test);
+        
+
+
+    </script>
+</body>
+</html>
