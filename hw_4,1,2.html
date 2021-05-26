@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        'use strict'
+
+        // es5
+
+        // Часть задания а
+
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        };
+
+        Post.prototype.edit = function(text) {
+            this.text = text;
+        };
+
+        let user = new Post("Martynov", "lorem", "31.07.1990");
+
+        console.log(user);
+
+        user.edit("impus");
+
+        console.log(user);
+
+        // Часть задания б
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function() {
+            this.highlighted = true;
+        };
+
+        let test = new AttachedPost("Pirojkov", "outleft", "31.07.1990");
+
+        console.log(test);
+
+        test.makeTextHighlighted();
+
+        console.log(test);
+
+    </script>
+</body>
+</html>
